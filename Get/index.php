@@ -10,8 +10,7 @@ print_r($data);
 
 function sendBulkSMS($apiKey,$callerID, $receiver, $message)
 {
-    // make sure passed string is url encoded
-    $message = rawurlencode($message);
+    $message = $message;
 
     $url = "https://bulksmsdhaka.com/api/sendtext?apikey=$apiKey&callerID=$callerID&number=$receiver&message=$message";
 
